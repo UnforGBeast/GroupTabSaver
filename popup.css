@@ -1,0 +1,155 @@
+/* --- General Body and Typography --- */
+body {
+  width: 320px; /* Slightly wider for better spacing */
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; /* Modern font stack */
+  padding: 15px; /* More padding around content */
+  box-sizing: border-box;
+  background-color: #f8f9fa; /* Light background for the popup */
+  color: #343a40; /* Darker text for readability */
+}
+
+h3 {
+  font-size: 1.1em; /* Slightly smaller, more refined heading */
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #212529; /* Darker heading color */
+  border-bottom: 1px solid #e9ecef; /* Subtle separator */
+  padding-bottom: 8px;
+}
+
+/* --- Input and Save Button Section --- */
+.form-container {
+  display: flex;
+  margin-bottom: 20px; /* More space below the save section */
+  gap: 8px; /* Space between input and button */
+}
+
+#group-name-input {
+  flex-grow: 1;
+  padding: 10px 12px; /* Increased padding */
+  border: 1px solid #ced4da; /* Subtle border */
+  border-radius: 6px; /* Slightly more rounded corners */
+  font-size: 0.95em;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease; /* Smooth transition for focus */
+}
+
+#group-name-input:focus {
+  border-color: #80bdff; /* Blue border on focus */
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Subtle blue glow */
+}
+
+#save-group-btn {
+  padding: 10px 18px; /* More generous padding */
+  background-color: #007bff; /* Primary blue */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95em;
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.1s ease; /* Smooth hover and click feedback */
+}
+
+#save-group-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+#save-group-btn:active {
+  transform: translateY(1px); /* Slight press effect */
+}
+
+/* --- Separator Line --- */
+hr {
+  border: none;
+  border-top: 1px solid #e9ecef; /* Lighter, more subtle line */
+  margin: 20px 0; /* More vertical space */
+}
+
+/* --- Saved Groups List --- */
+#groups-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* More space between group items */
+  max-height: 250px; /* Increased max height */
+  overflow-y: auto; /* Scroll if too many items */
+  padding-right: 5px; /* Space for scrollbar */
+}
+
+/* Custom scrollbar for better aesthetics */
+#groups-list::-webkit-scrollbar {
+  width: 8px;
+}
+#groups-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+#groups-list::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+#groups-list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+.group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px; /* Padding inside each item */
+  background-color: #ffffff; /* White background for items */
+  border: 1px solid #e9ecef; /* Subtle border */
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Soft shadow */
+  transition: transform 0.1s ease, box-shadow 0.1s ease; /* Smooth hover effect */
+}
+
+.group-item:hover {
+  transform: translateY(-1px); /* Slight lift effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
+}
+
+
+.group-item button {
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 0.9em;
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.load-btn {
+  background-color: #28a745; /* Success green */
+  color: white;
+  flex-grow: 1; /* Takes up available space */
+  margin-right: 8px; /* Space between load and delete */
+  text-align: left; /* Align text to the left */
+  padding-left: 15px; /* More padding on the left */
+}
+
+.load-btn:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.load-btn:active {
+  transform: translateY(1px);
+}
+
+.delete-btn {
+  background-color: #dc3545; /* Danger red */
+  color: white;
+  min-width: 35px; /* Slightly wider button */
+  padding: 8px 10px; /* Adjust padding for 'X' */
+  font-weight: bold; /* Make 'X' more prominent */
+}
+
+.delete-btn:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+.delete-btn:active {
+  transform: translateY(1px);
+}
